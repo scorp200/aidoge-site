@@ -1,0 +1,59 @@
+body {
+    background-color: #FFC107;
+    text-align: center
+}
+
+.profile {
+    left: 50%;
+    top: 30%;
+    height: 150px;
+    width: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    position: fixed;
+}
+
+.profile_img {
+    border-radius: 10%;
+    overflow: hidden;
+    width: 150px;
+    height: auto;
+}
+
+.middle {
+    display: inline-block;
+    margin-top: 25%;
+}
+
+.social {
+    float: left;
+    margin: 25px;
+}
+
+h2 {
+    position: relative;
+    top: -20px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+h2 span {
+    font: bold 24px Helvetica;
+    color: #FFECB3;
+    letter-spacing: -1px;
+}
+
+.social_button {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+}
+
+.social_button:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.social_button:active {
+    transform: scale(0.9, 0.9);
+}
