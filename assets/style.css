@@ -5,7 +5,7 @@ body {
 
 .profile {
     left: 50%;
-    top: 30%;
+    top: 300px;
     height: 150px;
     width: 300px;
     margin-left: -150px;
@@ -20,9 +20,16 @@ body {
     height: auto;
 }
 
+.holder {
+    left: 0;
+    right: 0;
+    top: 450px;
+    height: 300px;
+    position: fixed;
+}
+
 .middle {
     display: inline-block;
-    margin-top: 25%;
 }
 
 .social {
