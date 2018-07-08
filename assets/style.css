@@ -40,6 +40,10 @@ body {
     position: fixed;
     background: white;
     overflow-y: scroll;
+    box-shadow: inset -3px 41px 13px -41px #212121;
+    -webkit-box-shadow: inset -3px 41px 13px -41px #212121;
+    -moz-box-shadow: inset -3px 41px 13px -41px #212121;
+    -o-box-shadow: inset -3px 41px 13px -41px #212121;
 }
 
 .middle {
