@@ -5,71 +5,123 @@
     <title>Doge</title>
     <meta charset="utf-8" />
     <meta name="theme-color" content="#FFA000" />
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" href="assets/style.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <link rel="icon" href="assets\favicon.png">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/doge.css">
+    <script src="https://kit.fontawesome.com/5e56fcdee5.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
-    <div class="top"></div>
-    <div class="profile">
-        <img class="profile_img" src="https://avatars.githubusercontent.com/scorp200" />
-        <h2 class="profile_text">
-            <span>Anton K
-            <br/>An aspiring developer
-        </span></h2>
-    </div>
-    <div class="holder">
-        <div class="holder_social">
-            <div class="social">
-                <a href="https://twitter.com/ai_Doge">
-            <img class='social_button' src="assets\Twitter_Social_Icon_Rounded_Square_Color.png"/>
-            </a>
-                <h2><span>Twitter</span></h2>
-            </div>
-            <div class="social">
-                <a href="https://github.com/scorp200">
-            <img class='social_button' src="assets\GitHub-Mark-120px-plus.png"/>
-            </a>
-                <h2><span>Github</span></h2>
-            </div>
-            <div class="social">
-                <a href="https://ai-doge.itch.io">
-            <img class='social_button' src="assets\itch_app_icon.png"/>
-            </a>
-                <h2><span>itch.io</span></h2>
-            </div>
-            <div class="social">
-                <a href="https://steamcommunity.com/id/ai_doge">
-            <img class='social_button' src="assets\Steam_Logo_Lockups-1.png"/>
-            </a>
-                <h2><span>Steam</span></h2>
-            </div>
-            <!--<div class="social">
-                <a href="">
-            <img class='social_button' src="assets\Discord-Logo-Color.png"/>
-            </a>
-                <h2><span>Discord</span></h2>
-            </div>
-            <div class="social">
-                <a href="">
-            <img class='social_button' src="assets\In-2C-128px-TM.png"/>
-            </a>
-                <h2><span>Linkedin</span></h2>
-            </div>-->
-        </div>
-        <div class="holder_extra">
-            <h2><span>Also checkout</span></h2>
-            <div class="holder_social">
-                <div class="extra">
-                    <a href="http://gb.aidoge.net">
-                <img class='social_button' src="assets\Wec2GHg__400x400.jpg"/>
-                </a>
-                    <h2><span>gamebeans.io</span></h2>
+    <div>
+        <section class="hero is-doge">
+            <div class="hero-body">
+                <div class="container is-fluid">
+                    <figure class="image is-128x128">
+                        <img class="is-rounded" src="https://avatars.githubusercontent.com/scorp200">
+                    </figure>
+                </div>
+                <div class="container is-fluid">
+                    <h1 class="title has-text-white">Anton K. (ai Doge)</h1>
+                    <h2 class="subtitle has-text-white">Full Stack Developer</h2>
                 </div>
             </div>
-        </div>
+        </section>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <p class="navbar-item"></p>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" data="pages/home.html">
+                        <span>
+                            <span class="icon">
+                                <i class="fa fa-home"></i>
+                            </span>
+                            &nbsp;Home
+                        </span>
+                    </a>
+                    <a class="navbar-item" data="pages/experience.html">
+                        <span>
+                            <span class="icon">
+                                <i class="fa fa-briefcase"></i>
+                            </span>
+                            &nbsp;Experience
+                        </span>
+                    </a>
+                    <a class="navbar-item" data="pages/projects.html">
+                        <span>
+                            <span class="icon">
+                                <i class="fa fa-gamepad"></i>
+                            </span>
+                            &nbsp;Projects
+                        </span>
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <span>
+                                <span class="icon">
+                                    <i class="fa fa-link"></i>
+                                </span>
+                                &nbsp;Links
+                            </span>
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="https://twitter.com/ai_Doge">
+                                <span>
+                                    <span class="icon" style="color: #1DA1F2;">
+                                        <i class="fab fa-lg fa-twitter"></i>
+                                    </span>
+                                    &nbsp;@ai_Doge
+                                </span>
+                            </a>
+                            <a class="navbar-item" href="https://github.com/scorp200">
+                                <span>
+                                    <span class="icon">
+                                        <i class="fab fa-lg fa-github"></i>
+                                    </span>
+                                    &nbsp;Github
+                                </span>
+                            </a>
+                            <a class="navbar-item" href="https://ai-doge.itch.io">
+                                <span>
+                                    <span class="icon" style="color:#f14668;">
+                                        <i class="fab fa-lg fa-itch-io"></i>
+                                    </span>
+                                    &nbsp;Itch.io
+                                </span>
+                            </a>
+                            <a class="navbar-item" href="https://steamcommunity.com/id/ai_doge">
+                                <span>
+                                    <span class="icon">
+                                        <i class="fab fa-lg fa-steam"></i>
+                                    </span>
+                                    &nbsp;Steam
+                                </span>
+                            </a>
+                            <!-- <a class="navbar-item" href="http://gb.aidoge.net">
+                                <span>
+                                    <span class="icon">
+                                        <i class="fab fa-lg"></i>
+                                        <img src="assets/Wec2GHg__400x400.jpg">
+                                    </span>
+                                    &nbsp;gamebeans.io
+                                </span>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
+    <div id="content"></div>
 </body>
 
 </html>
