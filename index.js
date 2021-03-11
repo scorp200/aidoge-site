@@ -1,8 +1,14 @@
-const home = 'pages/home.html';
-const error = 'pages/error.html';
+const home = 'home';
+const error = 'error';
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadPage('pages/home.html');
+    var query = new URLSearchParams(window.location.search);
+
+    if (query.has('page')) {
+        loadPage(query.get('page'));
+    } else {
+        loadPage('home');
+    }
 
     document.querySelectorAll('.navbar-burger').forEach(el => {
         el.addEventListener('click', e => {
@@ -14,20 +20,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[data]').forEach(el => {
         el.addEventListener('click', e => {
             let page = el.getAttribute('data');
-            if (page) loadPage(page);
+            if (page) {
+                query.set('page', page);
+                window.history.pushState({}, '', '?' + query.toString());
+                loadPage(page);
+            }
         });
     });
+
+    window.onpopstate = function (e) {
+        if (e.state) {
+            var query = new URLSearchParams(window.location.search);
+            loadPage(query.get('page'));
+        }
+    }
 });
 
 function loadPage(page) {
-    fetch(page).then(res => {
+    fetch('pages/' + page + '.html').then(res => {
         if (res.status === 200)
             return res.text();
         else
             throw new Error(res.statusText);
     }).then(html => {
-        // let adrs = page.split('/')[1].split('.')[0];
-        // window.history.pushState('', adrs, adrs);
         document.getElementById('content').innerHTML = html;
         toggleBurger(false);
     }).catch(function (err) {
